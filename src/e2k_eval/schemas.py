@@ -1,4 +1,5 @@
 """Common schema definitions for the project."""
+
 from pydantic import BaseModel, Field
 
 

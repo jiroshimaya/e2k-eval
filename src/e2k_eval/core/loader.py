@@ -1,13 +1,14 @@
-from pathlib import Path
 import random
+from pathlib import Path
 
 from e2k_eval.schemas import WordPair
+
 
 def load_evaluation_data() -> list[WordPair]:
     file_path = Path(__file__).parent.parent.parent.parent / "local/bep-eng.dic"
     num = 100
     seed = 42
-    with open(file_path, "r", encoding="utf-8") as f:
+    with file_path.open(encoding="utf-8") as f:
         lines = f.read().splitlines()
         lines = [line for line in lines if not line.startswith("#")]
         random.seed(seed)
