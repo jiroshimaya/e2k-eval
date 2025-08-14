@@ -1,7 +1,8 @@
 import time
 
-from english2kana import english2kana
 from e2k import NGram
+from english2kana import english2kana
+
 from e2k_eval.core.loader import load_evaluation_data
 from e2k_eval.core.utils import (
     calculate_relative_editdistance,
@@ -14,6 +15,7 @@ e2k = english2kana()
 e2k.load_model()
 
 ngram = NGram()
+
 
 def convert(english: str) -> str:
     if ngram(english):
