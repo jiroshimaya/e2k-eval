@@ -1,5 +1,5 @@
 [project]
-name = "project-name"
+name = "e2k-eval"
 dynamic = ["version"]
 description = "A modern Python project template optimized for Claude Code with strict guardrails"
 readme = "README.md"
@@ -9,6 +9,11 @@ dependencies = [
     "structlog>=25.4.0",
     "rich>=13.7.0", # structlogのカラフルなコンソール出力用
     "pydantic>=2.11.7",
+    "e2k>=0.6.2",
+    "english2kana>=0.1.5",
+    "editdistance>=0.8.1",
+    "kanasim>=0.0.4",
+    "jamorasep>=0.0.1",
 ]
 
 [build-system]
@@ -20,7 +25,7 @@ source = "vcs"
 
 [tool.hatch.build.targets.wheel]
 # TODO: 実際のプロジェクトでは "src/your_package_name" に更新してください
-packages = ["src/project_name"]  # テンプレート用の空パッケージ
+packages = ["src/e2k_eval"]  # テンプレート用の空パッケージ
 
 [tool.ruff]
 line-length = 88

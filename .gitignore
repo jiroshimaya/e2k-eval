@@ -46,4 +46,4 @@ coverage.xml
 
 # Project specific
 .secrets.baseline
-
+local
